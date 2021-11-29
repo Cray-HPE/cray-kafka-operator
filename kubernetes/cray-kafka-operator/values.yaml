@@ -14,67 +14,67 @@ strimzi-kafka-operator:
 
   zookeeper:
     image:
-      respository: artifactory.algol60.net/csm-docker/stable/docker.io/strimzi
+      repository: artifactory.algol60.net/csm-docker/stable/docker.io/strimzi
       name: kafka
       tagPrefix: 0.15.0
   kafka:
     image:
-      respository: artifactory.algol60.net/csm-docker/stable/docker.io/strimzi
+      repository: artifactory.algol60.net/csm-docker/stable/docker.io/strimzi
       name: kafka
       tagPrefix: 0.15.0
   kafkaConnect:
     image:
-      respository: artifactory.algol60.net/csm-docker/stable/docker.io/strimzi
+      repository: artifactory.algol60.net/csm-docker/stable/docker.io/strimzi
       name: kafka
       tagPrefix: 0.15.0
   kafkaConnects2i:
     image:
-      respository: artifactory.algol60.net/csm-docker/stable/docker.io/strimzi
+      repository: artifactory.algol60.net/csm-docker/stable/docker.io/strimzi
       name: kafka
       tagPrefix: 0.15.0
   topicOperator:
     image:
-      respository: artifactory.algol60.net/csm-docker/stable/docker.io/strimzi
+      repository: artifactory.algol60.net/csm-docker/stable/docker.io/strimzi
       name: operator
       tag: 0.15.0
   userOperator:
     image:
-      respository: artifactory.algol60.net/csm-docker/stable/docker.io/strimzi
+      repository: artifactory.algol60.net/csm-docker/stable/docker.io/strimzi
       name: operator
       tag: 0.15.0
   kafkaInit:
     image:
-      respository: artifactory.algol60.net/csm-docker/stable/docker.io/strimzi
+      repository: artifactory.algol60.net/csm-docker/stable/docker.io/strimzi
       name: operator
       tag: 0.15.0
   tlsSidecarZookeeper:
     image:
-      respository: artifactory.algol60.net/csm-docker/stable/docker.io/strimzi
+      repository: artifactory.algol60.net/csm-docker/stable/docker.io/strimzi
       name: kafka
       tagPrefix: 0.15.0
   tlsSidecarKafka:
     image:
-      respository: artifactory.algol60.net/csm-docker/stable/docker.io/strimzi
+      repository: artifactory.algol60.net/csm-docker/stable/docker.io/strimzi
       name: kafka
       tagPrefix: 0.15.0
   tlsSidecarEntityOperator:
     image:
-      respository: artifactory.algol60.net/csm-docker/stable/docker.io/strimzi
+      repository: artifactory.algol60.net/csm-docker/stable/docker.io/strimzi
       name: kafka
       tagPrefix: 0.15.0
   kafkaMirrorMaker:
     image:
-      respository: artifactory.algol60.net/csm-docker/stable/docker.io/strimzi
+      repository: artifactory.algol60.net/csm-docker/stable/docker.io/strimzi
       name: kafka
       tagPrefix: 0.15.0
   kafkaBridge:
     image:
-      respository: artifactory.algol60.net/csm-docker/stable/docker.io/strimzi
+      repository: artifactory.algol60.net/csm-docker/stable/docker.io/strimzi
       name: kafka-bridge
       tag: 0.15.0
   kafkaExporter:
     image:
-      respository: artifactory.algol60.net/csm-docker/stable/docker.io/strimzi
+      repository: artifactory.algol60.net/csm-docker/stable/docker.io/strimzi
       name: kafka
       tagPrefix: 0.15.0
 
