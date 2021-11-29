@@ -7,7 +7,7 @@ strimzi-kafka-operator:
     - sma
 
   image:
-    repository: artifactory.algol60.net/artifactory/csm-docker/stable/quay.io/strimzi
+    repository: artifactory.algol60.net/csm-docker/stable/quay.io/strimzi
     name: operator
     tag: 0.15.0
     imagePullPolicy: IfNotPresent
