@@ -7,8 +7,8 @@ strimzi-kafka-operator:
     - sma
 
   image:
-    repository: artifactory.algol60.net/artifactory/csm-docker/stable/quay.io/strimzi/operator
-    name: strimzi-kafka-operator
+    repository: artifactory.algol60.net/artifactory/csm-docker/stable/quay.io/strimzi
+    name: operator
     tag: 0.15.0
     imagePullPolicy: IfNotPresent
 # Increase resources.limits.cpu to 8 to reduce cpu throttling
