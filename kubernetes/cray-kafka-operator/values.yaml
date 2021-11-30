@@ -7,10 +7,77 @@ strimzi-kafka-operator:
     - sma
 
   image:
-    repository: artifactory.algol60.net/csm-docker/stable/quay.io/strimzi
+    repository: artifactory.algol60.net/csm-docker/stable/docker.io/strimzi
     name: operator
     tag: 0.15.0
     imagePullPolicy: IfNotPresent
+
+  zookeeper:
+    image:
+      repository: artifactory.algol60.net/csm-docker/stable/docker.io/strimzi
+      name: kafka
+      tagPrefix: 0.15.0
+  kafka:
+    image:
+      repository: artifactory.algol60.net/csm-docker/stable/docker.io/strimzi
+      name: kafka
+      tagPrefix: 0.15.0
+  kafkaConnect:
+    image:
+      repository: artifactory.algol60.net/csm-docker/stable/docker.io/strimzi
+      name: kafka
+      tagPrefix: 0.15.0
+  kafkaConnects2i:
+    image:
+      repository: artifactory.algol60.net/csm-docker/stable/docker.io/strimzi
+      name: kafka
+      tagPrefix: 0.15.0
+  topicOperator:
+    image:
+      repository: artifactory.algol60.net/csm-docker/stable/docker.io/strimzi
+      name: operator
+      tag: 0.15.0
+  userOperator:
+    image:
+      repository: artifactory.algol60.net/csm-docker/stable/docker.io/strimzi
+      name: operator
+      tag: 0.15.0
+  kafkaInit:
+    image:
+      repository: artifactory.algol60.net/csm-docker/stable/docker.io/strimzi
+      name: operator
+      tag: 0.15.0
+  tlsSidecarZookeeper:
+    image:
+      repository: artifactory.algol60.net/csm-docker/stable/docker.io/strimzi
+      name: kafka
+      tagPrefix: 0.15.0
+  tlsSidecarKafka:
+    image:
+      repository: artifactory.algol60.net/csm-docker/stable/docker.io/strimzi
+      name: kafka
+      tagPrefix: 0.15.0
+  tlsSidecarEntityOperator:
+    image:
+      repository: artifactory.algol60.net/csm-docker/stable/docker.io/strimzi
+      name: kafka
+      tagPrefix: 0.15.0
+  kafkaMirrorMaker:
+    image:
+      repository: artifactory.algol60.net/csm-docker/stable/docker.io/strimzi
+      name: kafka
+      tagPrefix: 0.15.0
+  kafkaBridge:
+    image:
+      repository: artifactory.algol60.net/csm-docker/stable/docker.io/strimzi
+      name: kafka-bridge
+      tag: 0.15.0
+  kafkaExporter:
+    image:
+      repository: artifactory.algol60.net/csm-docker/stable/docker.io/strimzi
+      name: kafka
+      tagPrefix: 0.15.0
+
 # Increase resources.limits.cpu to 8 to reduce cpu throttling
   resources:
     limits:

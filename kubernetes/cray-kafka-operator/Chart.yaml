@@ -1,5 +1,5 @@
 apiVersion: v2
-version: 0.7.0
+version: 0.7.1
 description: An extension of the official kafka-operator helm chart
 name: cray-kafka-operator
 keywords:
@@ -16,4 +16,15 @@ dependencies:
 icon: https://raw.githubusercontent.com/strimzi/strimzi-kafka-operator/main/documentation/logo/strimzi_logo.png
 appVersion: 0.15.0
 annotations:
+  artifacthub.io/images: |-
+    - name: operator
+      image: artifactory.algol60.net/csm-docker/stable/docker.io/strimzi/operator:0.15.0
+    - name: kafka-bridge
+      image: artifactory.algol60.net/csm-docker/stable/docker.io/strimzi/kafka-bridge:0.15.0
+    - name: kafka-2.3.1
+      image: artifactory.algol60.net/csm-docker/stable/docker.io/strimzi/kafka:0.15.0-kafka-2.3.1
+    - name: kafka-2.3.0
+      image: artifactory.algol60.net/csm-docker/stable/docker.io/strimzi/kafka:0.15.0-kafka-2.3.0
+    - name: kafka-2.2.1
+      image: artifactory.algol60.net/csm-docker/stable/docker.io/strimzi/kafka:0.15.0-kafka-2.2.1
   artifacthub.io/license: MIT
