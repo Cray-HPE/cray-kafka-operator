@@ -6,6 +6,19 @@ strimzi-kafka-operator:
   watchNamespaces:
     - services
     - sma
+
+  image:
+    tag: 0.15.0-noJndiLookupClass
+  topicOperator:
+    image:
+      tag: 0.15.0-noJndiLookupClass
+  userOperator:
+    image:
+      tag: 0.15.0-noJndiLookupClass
+  kafkaInit:
+    image:
+      tag: 0.15.0-noJndiLookupClass
+
 # Increase resources.limits.cpu to 8 to reduce cpu throttling
   resources:
     limits:

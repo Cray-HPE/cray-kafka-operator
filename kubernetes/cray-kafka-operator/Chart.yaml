@@ -3,4 +3,4 @@ appVersion: 0.15.0
 description: An extension of the official kafka-operator helm chart
 name: cray-kafka-operator
 home: "cloud/cray-charts"
-version: 0.4.1
+version: 0.4.2
