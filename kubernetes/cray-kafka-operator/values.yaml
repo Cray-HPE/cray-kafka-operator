@@ -18,8 +18,35 @@ strimzi-kafka-operator:
   kafkaInit:
     image:
       tag: 0.15.0-noJndiLookupClass
+  zookeeper:
+    image:
+      tagPrefix: 0.15.0-noJSM-chainsaw
+  kafka:
+    image:
+      tagPrefix: 0.15.0-noJSM-chainsaw
+  kafkaConnect:
+    image:
+      tagPrefix: 0.15.0-noJSM-chainsaw
+  kafkaConnects2i:
+    image:
+      tagPrefix: 0.15.0-noJSM-chainsaw
+  tlsSidecarZookeeper:
+    image:
+      tagPrefix: 0.15.0-noJSM-chainsaw
+  tlsSidecarKafka:
+    image:
+      tagPrefix: 0.15.0-noJSM-chainsaw
+  tlsSidecarEntityOperator:
+    image:
+      tagPrefix: 0.15.0-noJSM-chainsaw
+  kafkaMirrorMaker:
+    image:
+      tagPrefix: 0.15.0-noJSM-chainsaw
+  kafkaExporter:
+    image:
+      tagPrefix: 0.15.0-noJSM-chainsaw
 
-# Increase resources.limits.cpu to 8 to reduce cpu throttling
+  # Increase resources.limits.cpu to 8 to reduce cpu throttling
   resources:
     limits:
       cpu: "8"
