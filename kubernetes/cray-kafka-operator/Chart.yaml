@@ -1,5 +1,5 @@
 apiVersion: v2
-version: 1.1.0
+version: 1.2.0
 description: An extension of the official kafka-operator helm chart
 name: cray-kafka-operator
 keywords:
@@ -13,19 +13,21 @@ maintainers:
 dependencies:
   - name: strimzi-kafka-operator
     repository: https://strimzi.io/charts/
-    version: 0.27.1
+    version: 0.41.0
 icon: https://raw.githubusercontent.com/strimzi/strimzi-kafka-operator/main/documentation/logo/strimzi_logo.png
-appVersion: 0.27.1
+appVersion: 0.41.0
 annotations:
   artifacthub.io/images: |-
     - name: operator
-      image: artifactory.algol60.net/csm-docker/stable/quay.io/strimzi/operator:0.27.1
+      image: artifactory.algol60.net/csm-docker/stable/quay.io/strimzi/operator:0.41.0
     - name: kafka-bridge
-      image: artifactory.algol60.net/csm-docker/stable/quay.io/strimzi/kafka-bridge:0.21.2
-    - name: kafka-2.8.0
-      image: artifactory.algol60.net/csm-docker/stable/quay.io/strimzi/kafka:0.27.1-noJSM-chainsaw-kafka-2.8.0
-    - name: kafka-2.8.1
-      image: artifactory.algol60.net/csm-docker/stable/quay.io/strimzi/kafka:0.27.1-noJSM-chainsaw-kafka-2.8.1
-    - name: kafka-3.0.0
-      image: artifactory.algol60.net/csm-docker/stable/quay.io/strimzi/kafka:0.27.1-noJSM-chainsaw-kafka-3.0.0
+      image: artifactory.algol60.net/csm-docker/stable/quay.io/strimzi/kafka-bridge:0.28.0
+    - name: kafka-3.6.0
+      image: artifactory.algol60.net/csm-docker/stable/quay.io/strimzi/kafka:0.41.0-noJSM-chainsaw-kafka-3.6.0
+    - name: kafka-3.6.1
+      image: artifactory.algol60.net/csm-docker/stable/quay.io/strimzi/kafka:0.41.0-noJSM-chainsaw-kafka-3.6.1
+    - name: kafka-3.6.2
+      image: artifactory.algol60.net/csm-docker/stable/quay.io/strimzi/kafka:0.41.0-noJSM-chainsaw-kafka-3.6.2
+    - name: kafka-3.7.0
+      image: artifactory.algol60.net/csm-docker/stable/quay.io/strimzi/kafka:0.41.0-noJSM-chainsaw-kafka-3.7.0
   artifacthub.io/license: MIT
