@@ -10,7 +10,7 @@ strimzi-kafka-operator:
     registry: artifactory.algol60.net
     repository: csm-docker/stable/quay.io/strimzi
     name: operator
-    tag: 0.27.1
+    tag: 0.41.0
     imagePullPolicy: IfNotPresent
 
   zookeeper:
@@ -18,79 +18,79 @@ strimzi-kafka-operator:
       registry: artifactory.algol60.net
       repository: csm-docker/stable/quay.io/strimzi
       name: kafka
-      tagPrefix: 0.27.1-noJSM-chainsaw
+      tagPrefix: 0.41.0-noJSM-chainsaw
   kafka:
     image:
       registry: artifactory.algol60.net
       repository: csm-docker/stable/quay.io/strimzi
       name: kafka
-      tagPrefix: 0.27.1-noJSM-chainsaw
+      tagPrefix: 0.41.0-noJSM-chainsaw
   kafkaConnect:
     image:
       registry: artifactory.algol60.net
       repository: csm-docker/stable/quay.io/strimzi
       name: kafka
-      tagPrefix: 0.27.1-noJSM-chainsaw
+      tagPrefix: 0.41.0-noJSM-chainsaw
   kafkaConnects2i:
     image:
       registry: artifactory.algol60.net
       repository: csm-docker/stable/quay.io/strimzi
       name: kafka
-      tagPrefix: 0.27.1-noJSM-chainsaw
+      tagPrefix: 0.41.0-noJSM-chainsaw
   topicOperator:
     image:
       registry: artifactory.algol60.net
       repository: csm-docker/stable/quay.io/strimzi
       name: operator
-      tag: 0.27.1
+      tag: 0.41.0
   userOperator:
     image:
       registry: artifactory.algol60.net
       repository: csm-docker/stable/quay.io/strimzi
       name: operator
-      tag: 0.27.1
+      tag: 0.41.0
   kafkaInit:
     image:
       registry: artifactory.algol60.net
       repository: csm-docker/stable/quay.io/strimzi
       name: operator
-      tag: 0.27.1
+      tag: 0.41.0
   tlsSidecarZookeeper:
     image:
       registry: artifactory.algol60.net
       repository: csm-docker/stable/quay.io/strimzi
       name: kafka
-      tagPrefix: 0.27.1-noJSM-chainsaw
+      tagPrefix: 0.41.0-noJSM-chainsaw
   tlsSidecarKafka:
     image:
       registry: artifactory.algol60.net
       repository: csm-docker/stable/quay.io/strimzi
       name: kafka
-      tagPrefix: 0.27.1-noJSM-chainsaw
+      tagPrefix: 0.41.0-noJSM-chainsaw
   tlsSidecarEntityOperator:
     image:
       registry: artifactory.algol60.net
       repository: csm-docker/stable/quay.io/strimzi
       name: kafka
-      tagPrefix: 0.27.1-noJSM-chainsaw
+      tagPrefix: 0.41.0-noJSM-chainsaw
   kafkaMirrorMaker:
     image:
       registry: artifactory.algol60.net
       repository: csm-docker/stable/quay.io/strimzi
       name: kafka
-      tagPrefix: 0.27.1-noJSM-chainsaw
+      tagPrefix: 0.41.0-noJSM-chainsaw
   kafkaBridge:
     image:
       registry: artifactory.algol60.net
       repository: csm-docker/stable/quay.io/strimzi
       name: kafka-bridge
-      tag: 0.21.2
+      tag: 0.28.0
   kafkaExporter:
     image:
       registry: artifactory.algol60.net
       repository: csm-docker/stable/quay.io/strimzi
       name: kafka
-      tagPrefix: 0.27.1-noJSM-chainsaw
+      tagPrefix: 0.41.0-noJSM-chainsaw
 
   # Increase resources.limits.cpu to 8 to reduce cpu throttling
   resources:
@@ -100,3 +100,9 @@ strimzi-kafka-operator:
     requests:
       cpu: 200m
       memory: 256Mi
+
+kubectl:
+  image:
+    repository: artifactory.algol60.net/csm-docker/stable/docker-kubectl
+    tag: 1.24.17
+    pullPolicy: IfNotPresent
