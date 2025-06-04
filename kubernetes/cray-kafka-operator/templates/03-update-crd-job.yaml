@@ -40,9 +40,17 @@ spec:
     spec:
       serviceAccountName: "strimzi-cluster-operator"
       volumes:
-        - name: "cray-kafka-crd-configmap"
+        - name: "cray-kafka-crd-configmap-part1"
           configMap:
-            name: "cray-kafka-crd-configmap"
+            name: "cray-kafka-crd-configmap-part1"
+            defaultMode: 0755
+        - name: "cray-kafka-crd-configmap-part2"
+          configMap:
+            name: "cray-kafka-crd-configmap-part2"
+            defaultMode: 0755
+        - name: "cray-kafka-crd-configmap-part3"
+          configMap:
+            name: "cray-kafka-crd-configmap-part3"
             defaultMode: 0755
       restartPolicy: Never
       containers:
@@ -50,10 +58,21 @@ spec:
           image: "{{ .Values.kubectl.image.repository }}:{{ .Values.kubectl.image.tag }}"
           imagePullPolicy: "{{ .Values.kubectl.image.pullPolicy }}"
           volumeMounts:
-           - name: "cray-kafka-crd-configmap"
-             mountPath: /tmp
+           - name: "cray-kafka-crd-configmap-part1"
+             mountPath: /tmp/part1
+           - name: "cray-kafka-crd-configmap-part2"
+             mountPath: /tmp/part2
+           - name: "cray-kafka-crd-configmap-part3"
+             mountPath: /tmp/part3
           command:
             - '/bin/sh'
           args:
             - "-c"
-            - kubectl apply -f /tmp/strimzi-crds-0.45.0.yaml
+            - |
+              echo "Applying CRDs part 1..."
+              kubectl apply -f /tmp/part1/strimzi-crds-0.45.0-part1.yaml
+              echo "Applying CRDs part 2..."
+              kubectl apply -f /tmp/part2/strimzi-crds-0.45.0-part2.yaml
+              echo "Applying CRDs part 3..."
+              kubectl apply -f /tmp/part3/strimzi-crds-0.45.0-part3.yaml
+              echo "All CRDs applied successfully!"
