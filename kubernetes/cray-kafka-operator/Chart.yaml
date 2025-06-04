@@ -1,5 +1,5 @@
 apiVersion: v2
-version: 1.3.0
+version: 1.3.1
 description: An extension of the official kafka-operator helm chart
 name: cray-kafka-operator
 keywords:
@@ -10,6 +10,7 @@ sources:
 maintainers:
   - name: bo-quan
   - name: kburns-hpe
+  - name: arka-pramanik-hpe
 dependencies:
   - name: strimzi-kafka-operator
     repository: https://strimzi.io/charts/
@@ -22,6 +23,6 @@ annotations:
       image: artifactory.algol60.net/csm-docker/stable/quay.io/strimzi/operator:0.45.0
     - name: kafka-bridge
       image: artifactory.algol60.net/csm-docker/stable/quay.io/strimzi/kafka-bridge:0.31.1
-    - name: kafka-3.7.0
+    - name: kafka-3.9.0
       image: artifactory.algol60.net/csm-docker/stable/quay.io/strimzi/kafka:0.45.0-kafka-3.9.0
   artifacthub.io/license: MIT
